@@ -1,0 +1,32 @@
+@use "globals" as g;
+
+.btn {
+  background-color: g.$very-light-gray;
+  padding: 1rem 0;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 14px;
+  width: 150px;
+  transition: all 0.3s;
+  border: 1px solid g.$very-light-gray;
+  font-family: g.$lexend;
+
+  @include g.breakpoint(tab) {
+    margin-top: 3rem;
+  }
+
+  &-1 {
+    color: g.$orange;
+  }
+  &-2 {
+    color: g.$dark-cyan;
+  }
+  &-3 {
+    color: g.$very-dark-cyan;
+  }
+
+  &:hover {
+    background-color: transparent;
+    color: g.$white-paragraphs;
+  }
+}

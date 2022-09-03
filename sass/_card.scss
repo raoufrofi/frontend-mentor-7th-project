@@ -1,0 +1,23 @@
+@use "globals" as g;
+
+.card {
+  img {
+    width: 50px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 2rem;
+
+  // Coloring cards
+  &-1 {
+    background-color: g.$orange;
+  }
+  &-2 {
+    background-color: g.$dark-cyan;
+  }
+  &-3 {
+    background-color: g.$very-dark-cyan;
+  }
+}

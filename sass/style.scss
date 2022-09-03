@@ -1,0 +1,33 @@
+@use "globals" as g;
+@use "typo";
+@use "card";
+@use "btn";
+
+body {
+  width: 100%;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include g.breakpoint(tab) {
+    height: 100vh;
+  }
+}
+
+main {
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  width: min(300px, 90%);
+  margin-inline: auto;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @include g.breakpoint(tab) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    width: min(1080px, 90%);
+  }
+}
